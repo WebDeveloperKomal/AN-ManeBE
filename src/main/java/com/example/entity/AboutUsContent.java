@@ -70,7 +70,7 @@ public class AboutUsContent {
 //	    
 //	    @Column(name = "our_value" , columnDefinition = "LONGTEXT")
 //	    private String value;
-////	    
+//	    
 //	    @Column(name = "experience_value")
 //	    private String experience;
 //	    

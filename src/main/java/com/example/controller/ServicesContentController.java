@@ -65,8 +65,8 @@ public class ServicesContentController {
             @PathVariable int id,
             @RequestParam String title,
             @RequestParam String information
-            , Authentication authentication) {
-    	LoginUserDetails loginUserDetails = (LoginUserDetails) authentication.getPrincipal();
+            ) {
+//    	LoginUserDetails loginUserDetails = (LoginUserDetails) authentication.getPrincipal();
     	Map<String, Object> response = new HashMap<>();
         try {
             Optional<ServicesContent> existingServicesContent = servicesContentRepository.findById(id);

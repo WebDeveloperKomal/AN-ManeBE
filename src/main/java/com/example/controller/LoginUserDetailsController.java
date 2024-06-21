@@ -58,6 +58,7 @@ public class LoginUserDetailsController {
 	
 
 	/*-----------------------add-new-user-----------------------*/
+	
 	@PostMapping(value = ("/add-new-user"))
 	private ResponseEntity<Map<String, Object>> saveSlides(
 			@RequestBody String data/* , Authentication authentication */) {
@@ -87,6 +88,8 @@ public class LoginUserDetailsController {
 	}
 
 	/*-----------------------login-user-----------------------*/
+
+    @CrossOrigin(origins = "http://127.0.0.1:5502")
 	@PostMapping("/login")
 	public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request) {
 		this.doAuthenticate(request.getEmail(), request.getPassword());

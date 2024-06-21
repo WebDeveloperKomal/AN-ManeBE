@@ -39,13 +39,12 @@ public class SubscribeEmailController {
 	private EmailService emailService;
 
 	/**************** Save Quote *****************/
-	@CrossOrigin(origins = "http://127.0.0.1:5501")
-	@PostMapping("save-subscribe")
-	public ResponseEntity<SubscribeEmail> createSubscribe(@RequestBody SubscribeEmail subscribeEmail){
-		SubscribeEmail saveSubscribeEmail = emailService.savSubscribeEmail(subscribeEmail);
-		 return ResponseEntity.ok(saveSubscribeEmail);
-	}
-	
+	 @CrossOrigin(origins = "http://127.0.0.1:5501")
+	    @PostMapping("/save-subscribe")
+	    public ResponseEntity<SubscribeEmail> createSubscribe(@RequestBody SubscribeEmail subscribeEmail) {
+	        SubscribeEmail saveSubscribeEmail = emailService.savSubscribeEmail(subscribeEmail);
+	        return ResponseEntity.ok(saveSubscribeEmail);
+	    }	
 	
 	/*-----------------------subscribe-user----------------------*/
 	@PostMapping("/subscribe")

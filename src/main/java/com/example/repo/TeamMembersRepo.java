@@ -15,7 +15,7 @@ public interface TeamMembersRepo extends JpaRepository<TeamMembers, Integer>{
 	@Query("SELECT t FROM TeamMembers t WHERE t.status = 0")
 	List<TeamMembers> findAllByStatusIsZero();
 	
-	@Query("SELECT COUNT(t) FROM TeamMembers t")
+	@Query("SELECT COUNT(t) FROM TeamMembers t WHERE t.status = 0")
 	Long getTotalMemberCount();
 	
 	 @Query("SELECT t FROM TeamMembers t WHERE t.id = :id AND t.status = 0")
